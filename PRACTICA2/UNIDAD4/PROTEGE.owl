@@ -1,0 +1,774 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/xaviv/ontologies/2021/5/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/xaviv/ontologies/2021/5/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/xaviv/ontologies/2021/5/untitled-ontology-2"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Alumno"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asignatura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Calendario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Curso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Descriptor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Horarios"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Obligatoria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Optativa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Profesor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Universidad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneAlumnos"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneAsignaturas"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneDescriptor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneHorarios"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneProfesor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Año"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Becado"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Cantidad_matriculados"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Codigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Creditos_obtenidos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Cuatrimestre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Departamento"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Descripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Dificultad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ISBlibro_teorico"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Metodo_evaluacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Nota_expediente"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Porcentaje_aprobados"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#apellidos_alumno"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#apellidos_profesor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#aula_practica"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cantidad_matriculados_curso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#horas_libres"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#laborales"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_alumno"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_asignatura"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_profesor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre_universidad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alum1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alum2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Asig1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Asig2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Asig3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Asig4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cal1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Descr1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Descr2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Descr3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hor1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Prof2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Uni1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cur1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cur2"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Obligatoria"/>
+        <Class IRI="#Asignatura"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Optativa"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#nombre_asignatura"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Alumno"/>
+        <NamedIndividual IRI="#Alum1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Alumno"/>
+        <NamedIndividual IRI="#Alum2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Optativa"/>
+        <NamedIndividual IRI="#Asig4"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneAsignaturas"/>
+        <NamedIndividual IRI="#Alum1"/>
+        <NamedIndividual IRI="#Asig1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneAsignaturas"/>
+        <NamedIndividual IRI="#Alum1"/>
+        <NamedIndividual IRI="#Asig3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneAsignaturas"/>
+        <NamedIndividual IRI="#Alum2"/>
+        <NamedIndividual IRI="#Asig2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneAsignaturas"/>
+        <NamedIndividual IRI="#Alum2"/>
+        <NamedIndividual IRI="#Asig3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneDescriptor"/>
+        <NamedIndividual IRI="#Asig1"/>
+        <NamedIndividual IRI="#Descr2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneProfesor"/>
+        <NamedIndividual IRI="#Asig1"/>
+        <NamedIndividual IRI="#Prof1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneDescriptor"/>
+        <NamedIndividual IRI="#Asig2"/>
+        <NamedIndividual IRI="#Descr1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneProfesor"/>
+        <NamedIndividual IRI="#Asig2"/>
+        <NamedIndividual IRI="#Prof1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneDescriptor"/>
+        <NamedIndividual IRI="#Asig3"/>
+        <NamedIndividual IRI="#Descr3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneProfesor"/>
+        <NamedIndividual IRI="#Asig3"/>
+        <NamedIndividual IRI="#Prof2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneDescriptor"/>
+        <NamedIndividual IRI="#Asig4"/>
+        <NamedIndividual IRI="#Descr3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneProfesor"/>
+        <NamedIndividual IRI="#Asig4"/>
+        <NamedIndividual IRI="#Prof2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneAlumnos"/>
+        <NamedIndividual IRI="#cur1"/>
+        <NamedIndividual IRI="#Alum1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneAlumnos"/>
+        <NamedIndividual IRI="#cur1"/>
+        <NamedIndividual IRI="#Alum2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneAlumnos"/>
+        <NamedIndividual IRI="#cur2"/>
+        <NamedIndividual IRI="#Alum1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneAlumnos"/>
+        <NamedIndividual IRI="#cur2"/>
+        <NamedIndividual IRI="#Alum2"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Becado"/>
+        <NamedIndividual IRI="#Alum1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Creditos_obtenidos"/>
+        <NamedIndividual IRI="#Alum1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Nota_expediente"/>
+        <NamedIndividual IRI="#Alum1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">7.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#apellidos_alumno"/>
+        <NamedIndividual IRI="#Alum1"/>
+        <Literal>Benitez Fatou</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre_alumno"/>
+        <NamedIndividual IRI="#Alum1"/>
+        <Literal>Julio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Becado"/>
+        <NamedIndividual IRI="#Alum2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Creditos_obtenidos"/>
+        <NamedIndividual IRI="#Alum2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Nota_expediente"/>
+        <NamedIndividual IRI="#Alum2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">6.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#apellidos_alumno"/>
+        <NamedIndividual IRI="#Alum2"/>
+        <Literal>Salado Mendez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre_alumno"/>
+        <NamedIndividual IRI="#Alum2"/>
+        <Literal>Claudia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Cantidad_matriculados"/>
+        <NamedIndividual IRI="#Asig1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Codigo"/>
+        <NamedIndividual IRI="#Asig1"/>
+        <Literal>AS1234</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Dificultad"/>
+        <NamedIndividual IRI="#Asig1"/>
+        <Literal>ALTA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Metodo_evaluacion"/>
+        <NamedIndividual IRI="#Asig1"/>
+        <Literal>Continua</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre_asignatura"/>
+        <NamedIndividual IRI="#Asig1"/>
+        <Literal>Calculo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Cantidad_matriculados"/>
+        <NamedIndividual IRI="#Asig2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">37</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Codigo"/>
+        <NamedIndividual IRI="#Asig2"/>
+        <Literal>AS5678</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Dificultad"/>
+        <NamedIndividual IRI="#Asig2"/>
+        <Literal>MEDIA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Metodo_evaluacion"/>
+        <NamedIndividual IRI="#Asig2"/>
+        <Literal>Evaluacion unica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre_asignatura"/>
+        <NamedIndividual IRI="#Asig2"/>
+        <Literal>Estadistica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Cantidad_matriculados"/>
+        <NamedIndividual IRI="#Asig3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Codigo"/>
+        <NamedIndividual IRI="#Asig3"/>
+        <Literal>AS9012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Dificultad"/>
+        <NamedIndividual IRI="#Asig3"/>
+        <Literal>BAJA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#ISBlibro_teorico"/>
+        <NamedIndividual IRI="#Asig3"/>
+        <Literal>SBN87382</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Metodo_evaluacion"/>
+        <NamedIndividual IRI="#Asig3"/>
+        <Literal>Continua</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre_asignatura"/>
+        <NamedIndividual IRI="#Asig3"/>
+        <Literal>Algebra</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Cantidad_matriculados"/>
+        <NamedIndividual IRI="#Asig4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">78</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Codigo"/>
+        <NamedIndividual IRI="#Asig4"/>
+        <Literal>AS7583</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Dificultad"/>
+        <NamedIndividual IRI="#Asig4"/>
+        <Literal>ALTA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Metodo_evaluacion"/>
+        <NamedIndividual IRI="#Asig4"/>
+        <Literal>Continua</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#aula_practica"/>
+        <NamedIndividual IRI="#Asig4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre_asignatura"/>
+        <NamedIndividual IRI="#Asig4"/>
+        <Literal>MP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#laborales"/>
+        <NamedIndividual IRI="#Cal1"/>
+        <Literal>12junio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#laborales"/>
+        <NamedIndividual IRI="#Cal1"/>
+        <Literal>14mayo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Descripcion"/>
+        <NamedIndividual IRI="#Descr1"/>
+        <Literal>Asignatura de Estadistica Obligatoria de 1º de In. Informatica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Descripcion"/>
+        <NamedIndividual IRI="#Descr2"/>
+        <Literal>Asignatura de Calculo Obligatoria de 1º de In. Informatica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Descripcion"/>
+        <NamedIndividual IRI="#Descr3"/>
+        <Literal>Asignatura de Algebra Obligatoria de 1º de In. Informatica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#horas_libres"/>
+        <NamedIndividual IRI="#Hor1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Departamento"/>
+        <NamedIndividual IRI="#Prof1"/>
+        <Literal>Bases de Datos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Porcentaje_aprobados"/>
+        <NamedIndividual IRI="#Prof1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">92.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#apellidos_profesor"/>
+        <NamedIndividual IRI="#Prof1"/>
+        <Literal>Cabezas Castillo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre_profesor"/>
+        <NamedIndividual IRI="#Prof1"/>
+        <Literal>Juan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Departamento"/>
+        <NamedIndividual IRI="#Prof2"/>
+        <Literal>Inteligencia Artificial</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Porcentaje_aprobados"/>
+        <NamedIndividual IRI="#Prof2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">69.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#apellidos_profesor"/>
+        <NamedIndividual IRI="#Prof2"/>
+        <Literal>Rodriguez Muñoz</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre_profesor"/>
+        <NamedIndividual IRI="#Prof2"/>
+        <Literal>Alberto</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre_universidad"/>
+        <NamedIndividual IRI="#Uni1"/>
+        <Literal>UGR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Año"/>
+        <NamedIndividual IRI="#cur1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2021</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Cuatrimestre"/>
+        <NamedIndividual IRI="#cur1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cantidad_matriculados_curso"/>
+        <NamedIndividual IRI="#cur1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">56</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Año"/>
+        <NamedIndividual IRI="#cur2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2021</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Cuatrimestre"/>
+        <NamedIndividual IRI="#cur2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cantidad_matriculados_curso"/>
+        <NamedIndividual IRI="#cur2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">45</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneAlumnos"/>
+        <Class IRI="#Curso"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneAsignaturas"/>
+        <Class IRI="#Alumno"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneDescriptor"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneHorarios"/>
+        <Class IRI="#Calendario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneProfesor"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneAlumnos"/>
+        <Class IRI="#Alumno"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneAsignaturas"/>
+        <Class IRI="#Asignatura"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneDescriptor"/>
+        <Class IRI="#Descriptor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneHorarios"/>
+        <Class IRI="#Horarios"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneProfesor"/>
+        <Class IRI="#Profesor"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Año"/>
+        <Class IRI="#Curso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Becado"/>
+        <Class IRI="#Alumno"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Cantidad_matriculados"/>
+        <Class IRI="#Asignatura"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Codigo"/>
+        <Class IRI="#Asignatura"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Creditos_obtenidos"/>
+        <Class IRI="#Alumno"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Cuatrimestre"/>
+        <Class IRI="#Curso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Departamento"/>
+        <Class IRI="#Profesor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Descripcion"/>
+        <Class IRI="#Descriptor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Dificultad"/>
+        <Class IRI="#Asignatura"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ISBlibro_teorico"/>
+        <Class IRI="#Obligatoria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Metodo_evaluacion"/>
+        <Class IRI="#Asignatura"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Nota_expediente"/>
+        <Class IRI="#Alumno"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Porcentaje_aprobados"/>
+        <Class IRI="#Profesor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#apellidos_alumno"/>
+        <Class IRI="#Alumno"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#apellidos_profesor"/>
+        <Class IRI="#Profesor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#aula_practica"/>
+        <Class IRI="#Optativa"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cantidad_matriculados_curso"/>
+        <Class IRI="#Curso"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#horas_libres"/>
+        <Class IRI="#Horarios"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#laborales"/>
+        <Class IRI="#Calendario"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_alumno"/>
+        <Class IRI="#Alumno"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_asignatura"/>
+        <Class IRI="#Asignatura"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_profesor"/>
+        <Class IRI="#Profesor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre_universidad"/>
+        <Class IRI="#Universidad"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Año"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Becado"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Cantidad_matriculados"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Codigo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Creditos_obtenidos"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Cuatrimestre"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Departamento"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Descripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Dificultad"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ISBlibro_teorico"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Metodo_evaluacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Nota_expediente"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Porcentaje_aprobados"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#apellidos_alumno"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#apellidos_profesor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#aula_practica"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cantidad_matriculados_curso"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#horas_libres"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#laborales"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_alumno"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_asignatura"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_profesor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre_universidad"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
